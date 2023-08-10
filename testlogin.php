@@ -24,10 +24,11 @@
                 exit();
             } else {
                 echo "Password is incorrect";
+                header("Location: http://localhost:8888/passnot.html");
             }
         } else {
-            echo "Email does not exist";
-            header("Location: http://localhost:8888/reg.html");
+            // echo "Email does not exist";
+            header("Location: http://localhost:8888/emailnot.html");
             exit();
         }
     } else {

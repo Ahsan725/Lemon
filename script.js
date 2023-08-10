@@ -2,7 +2,7 @@ function orderHandler() {
   var x = "Order";
   var y = "Submitted ✓";
   document.getElementById("review").innerHTML = x + " " + y;
-  summary();
+  // summary();
 }
 
 function total() {
@@ -11,12 +11,12 @@ function total() {
   window.alert(message + " " + add * 15);
 }
 
-function summary() {
-  var name = document.getElementById("nonEmpty").value;
-  if (!name.length == 0) {
-    window.location.href = "summary.html";
-  }
-}
+// function summary() {
+//   var name = document.getElementById("nonEmpty").value;
+//   if (!name.length == 0) {
+//     window.location.href = "summary.html";
+//   }
+// }
 
 // Function to add the selected item to the order table
 function addToOrder() {
