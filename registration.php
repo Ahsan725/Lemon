@@ -24,7 +24,8 @@ $sql = "SELECT * FROM test_table WHERE email = '$em'";
 $result = mysqli_query($conn, $sql);
 $rowCount = mysqli_num_rows($result);
 if($rowCount > 0){
-    echo "Email already exists"; //this is the error message that will be displayed if the email already exists
+    echo "Email already exists";
+    header("Location: http://localhost:8888/emailyes.html"); //this is the error message that will be displayed if the email already exists
     exit();
 }
 
@@ -32,6 +33,7 @@ if($pass == $passwordRepeat){
     $sql = "INSERT INTO test_table (full_name, email, password) VALUES ('$nam', '$em', '$pass')";
 }else{
     echo "Passwords do not match";
+    header("Location: http://localhost:8888/passnotmatch.html");
     exit();
 }
 $result = mysqli_query($conn, $sql);
@@ -40,6 +42,7 @@ if($result){
 }
 else{
     echo "Error: Account Creation was unsuccessful";
+    header("Location: http://localhost:8888/AccCreated.html");
 }
 
 $mysqli->close();
