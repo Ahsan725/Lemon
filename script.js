@@ -111,7 +111,7 @@ document.addEventListener("click", function (event) {
 });
 
 let timer;
-let timerDuration = 15 * 60; // 15 minutes in seconds
+let timerDuration = 1 * 60; // 15 minutes in seconds
 
 function startTimer() {
   timer = setInterval(updateTimer, 1000);
@@ -126,7 +126,8 @@ function updateTimer() {
   if (timerDuration === 0) {
     clearInterval(timer);
     document.getElementById("timerDisplay").textContent = "Time's up!";
-    document.getElementById("submitOrderBtn").disabled = true;
+    // document.getElementById("submitOrderBtn").disabled = true;
+    location.reload();
   } else {
     timerDuration--;
   }
