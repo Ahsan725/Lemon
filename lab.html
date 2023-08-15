@@ -90,11 +90,12 @@
     <option value="13">Chicken Alfredo ($13 USD)</option>
     <option value="12">Shrimp Tacos ($12 USD)</option>
   </select>
+  <input type="number" id="quantity" class="inputfields" value="1">
   <button onclick="addToOrder()" class="btn">Add to Order</button>
 
 
   <div class="post" style="max-width: 500px; background-color: lightgrey;">
-    <h3>Order Summary:</h3>
+    <h3>Your Cart:</h3>
   <table id="orderTable">
     <thead>
       <tr>
@@ -113,12 +114,21 @@
     </tfoot>
   </table>
 </div>
+
+
+
    <!-- <center><iframe width="500" height="300" src="https://www.youtube.com/embed/9skqEkqAqyk" title="How to tell if you have a food allergy, according to a nutritionist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
    </center> -->
 
     <br>
     <!-- <a href="about.html"><button type="submit" class="btn" id="cancel"> About Us </button></a> -->
-    <button type="submit" class="btn" id="review" onClick="orderHandler()"> Submit Order </button>
+    <button type="button" class="btn" id="review" onClick="orderHandler()"> Order Summary </button>
+    <div id="orderSummary"></div>
+    <div>
+      <p>We will hold your items in the cart for 15 min: <span id="timerDisplay">15:00</span></p>
+      <button id="submitOrderBtn" type="button" class="btn" onClick="submitOrder()">Submit Order</button>
+    </div>
+    
     </center>
     <script type="text/javascript" src="script.js"></script>
     </body>
