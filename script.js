@@ -1,6 +1,4 @@
 function orderHandler() {
-
-
   displayOrderSummary();
 }
 
@@ -58,7 +56,6 @@ function displayOrderSummary() {
   orderSummary.appendChild(summaryTable);
 }
 
-
 // Function to add the selected item to the order table
 function addToOrder() {
   const itemSelect = document.getElementById("item");
@@ -102,7 +99,6 @@ function removeItem(row) {
   updateTotal(-itemPrice); // Subtract the removed item's price from total
 }
 
-// Attach event listeners to each "Remove" button
 document.addEventListener("click", function (event) {
   if (event.target && event.target.classList.contains("removeBtn")) {
     const row = event.target.closest("tr");
@@ -121,7 +117,9 @@ function updateTimer() {
   const minutes = Math.floor(timerDuration / 60);
   const seconds = timerDuration % 60;
 
-  document.getElementById("timerDisplay").textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  document.getElementById("timerDisplay").textContent = `${minutes}:${
+    seconds < 10 ? "0" : ""
+  }${seconds}`;
 
   if (timerDuration === 0) {
     clearInterval(timer);
@@ -134,10 +132,6 @@ function updateTimer() {
 }
 
 function submitOrder() {
-  // Add your existing code to process the order or any other necessary tasks
-
   // Redirect to the "Thank You" page after submitting the order
   window.location.href = "thank.html";
 }
-
-
