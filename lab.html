@@ -91,7 +91,7 @@
     <option value="12">Shrimp Tacos ($12 USD)</option>
   </select>
   <input type="number" id="quantity" class="inputfields" value="1">
-  <button onclick="addToOrder()" class="btn">Add to Order</button>
+  <button onclick="addToOrder()" class="btn" id="order-btn">Add to Order</button>
 
 
   <div class="post" style="max-width: 500px; background-color: lightgrey;">
@@ -126,7 +126,7 @@
     <div id="orderSummary"></div>
     <div>
       <p>We will hold your items in the cart for 15 min: <span id="timerDisplay">15:00</span></p>
-      <button id="submitOrderBtn" type="button" class="btn" onClick="submitOrder()">Submit Order</button>
+      <button id="submitOrderBtn" type="button" class="btn-ordr" onClick="submitOrder()">Submit Order</button>
     </div>
     
     </center>
